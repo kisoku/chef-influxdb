@@ -51,7 +51,7 @@ module InfluxDB
     def self.config_file(hash, run_context)
       f = Chef::Resource::File.new(INFLUXDB_CONFIG, run_context)
       f.owner 'root'
-      f.mode  00644
+      f.mode 00644
       f.content TOML::Generator.new(hash).body
       f.run_action :create
     end
