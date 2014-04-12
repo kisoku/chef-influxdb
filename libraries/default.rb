@@ -24,7 +24,6 @@ require 'chef/resource/chef_gem'
 
 module InfluxDB
   module Helpers
-
     INFLUXDB_CONFIG = '/opt/influxdb/shared/config.toml'
 
     # TODO : Configurable administrator creds
