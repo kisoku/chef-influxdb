@@ -15,18 +15,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name             'influxdb'
-maintainer       'Simple Finance Technology Corp'
+name 'influxdb'
+maintainer 'Simple Finance Technology Corp'
 maintainer_email 'ops@simple.com'
-license          'Apache 2.0'
-description      'InfluxDB, a timeseries database'
-version          '2.0.0'
+license 'Apache 2.0'
+description 'InfluxDB, a timeseries database'
+version '2.0.0'
 
 # For CLI client
 # https://github.com/balbeko/chef-npm
 suggests 'npm'
 
-# For ChefInfluxDB Chef handler 
+# For ChefInfluxDB Chef handler
 # https://github.com/jakedavis/chef-handler-influxdb
 depends 'chef_handler'
-
