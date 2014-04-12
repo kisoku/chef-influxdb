@@ -2,7 +2,7 @@
 #
 # Author: Simple Finance <ops@simple.com>
 # License: Apache License, Version 2.0
-# 
+#
 # Copyright 2013 Simple Finance Technology Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +28,7 @@ def initialize(new_resource, run_context)
 end
 
 action :create do
-  unless @client.get_database_list.collect {|x| x['name']}.member?(@name)
+  unless @client.get_database_list.collect { |x| x['name'] }.member?(@name)
     @client.create_database(@name)
   end
 end
@@ -36,4 +36,3 @@ end
 action :delete do
   @client.delete_database(@name)
 end
-
