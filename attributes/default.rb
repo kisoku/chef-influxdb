@@ -50,30 +50,30 @@ default[:influxdb][:handler][:version] = '0.1.4'
 # Parameters to configure InfluxDB
 default[:influxdb][:config] = {
   'bind-address' => '0.0.0.0',
-  :logging => {
-    :level => 'info',
-    :file => 'influxdb.log'
+  logging: {
+    level: 'info',
+    file: 'influxdb.log'
   },
-  :admin => {
-    :port => 8083,
-    :assets => '/opt/influxdb/current/admin'
+  admin: {
+    port: 8083,
+    assets: '/opt/influxdb/current/admin'
   },
-  :api => {
+  api: {
     'read-timeout' => '5s',
-    :port => 8086
+    port: 8086
   },
   'input_plugins' => {
-    :graphite => {
-      :enabled => false
+    graphite: {
+      enabled: false
     }
   },
   raft: {
-    :port => 8090,
-    :dir => '/opt/influxdb/shared/data/raft'
+    port: 8090,
+    dir: '/opt/influxdb/shared/data/raft'
   },
   storage: {
     'write-buffer-size' => 10_000,
-    :dir => '/opt/influxdb/shared/data/db'
+    dir: '/opt/influxdb/shared/data/db'
   },
   cluster: {
     'protobuf_port' => 8099,
@@ -92,16 +92,16 @@ default[:influxdb][:config] = {
   sharding: {
     'replication-factor' => 1,
     'short-term' => {
-      :duration => '7d',
-      :split => 1
+      duration: '7d',
+      split: 1
     },
     'long-term' => {
-      :duration => '30d',
-      :split => 1
+      duration: '30d',
+      split: 1
     }
   },
   wal: {
-    :dir => '/opt/influxdb/shared/data/wal',
+    dir: '/opt/influxdb/shared/data/wal',
     'flush-after' => 1_000,
     'bookmark-after' => 1_000,
     'index-after' => 1_000,
