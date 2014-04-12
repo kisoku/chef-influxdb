@@ -35,7 +35,8 @@ end.run_action(:install)
 chef_handler 'ChefInfluxDB' do
   source ::File.join(
     Gem::Specification.find_by_name(
-      'chef-handler-influxdb').lib_dirs_glob,
-      'chef-handler-influxdb.rb')
+    'chef-handler-influxdb').lib_dirs_glob,
+    'chef-handler-influxdb.rb'
+  )
   action :nothing
 end.run_action(:enable)
