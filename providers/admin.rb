@@ -34,7 +34,7 @@ action :create do
                      ' for the :create action on this resource!')
   end
   unless @client.get_cluster_admin_list
-    .collect {|x| x['username']}.member?(@username)
+    .collect { |x| x['username'] }.member?(@username)
     @client.create_cluster_admin(@username, @password)
   end
 end
